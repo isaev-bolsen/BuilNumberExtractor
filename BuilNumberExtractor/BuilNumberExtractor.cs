@@ -10,7 +10,9 @@ namespace BuilNumberExtractor
     {
         public static bool isFeatureBuild(string build)
             {
-            return true;
+            if (!System.Text.RegularExpressions.Regex.IsMatch(build, "\\d{1}.\\d{2}.\\d{4}"))
+                throw new ArgumentException("String does not contain correct build number!");
+            return System.Text.RegularExpressions.Regex.IsMatch(build, "\\d{1}.\\d{2}.\\d{4}.\\d{4}");
             }
     }
 }
