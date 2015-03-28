@@ -28,5 +28,14 @@ namespace BuilNumberExtractorTest
             {
             BuilNumberExtractor.BuilNumberExtractor.isFeatureBuild("Test-Cluster125.1032.0161.00043.xml asd");
             }
+
+        [TestMethod]
+        public void INRTEST()
+            {
+            var res = BuilNumberExtractor.BuilNumberExtractor.INcr();
+            Assert.AreEqual(4, res.Key);
+            Assert.AreEqual(4, res.Value);
+            }
+
         }
     }
