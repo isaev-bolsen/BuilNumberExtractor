@@ -32,6 +32,8 @@ namespace BuilNumberExtractorTest
         [TestMethod]
         public void INRTEST()
             {
+            BuilNumberExtractor.BuilNumberExtractor.Extract("Test5.10.0161-Cluster123.xml asd");
+
             var res = BuilNumberExtractor.BuilNumberExtractor.INcr();
             Assert.AreEqual(4, res.Key);
             Assert.AreEqual(4, res.Value);
